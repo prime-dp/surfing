@@ -1,0 +1,312 @@
+* {
+  font-family: 'Montserrat', sans-serif;
+}
+
+h1,h2,h3,h4,h5,h6 {
+  margin: 0;
+  line-height: 1;
+}
+
+a {
+  text-decoration: none;
+  line-height: 1;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  line-height: 1;
+}
+
+.exchange-rates {
+  font-weight: 500;
+  color: $header-login-font-color;
+  text-transform: uppercase;
+  font-size: .87rem;
+  span{
+    font-weight: 400;
+    color: $yellow;
+    font-size: 1rem;
+    line-height: 1;
+  }
+}
+
+.schedule {
+  span {
+    color: $header-login-font-color;
+    font-weight: 400;
+    font-size: .87rem;
+  }
+}
+
+.phone-wrap {
+  font-weight: 500;
+  font-size: 0.87rem;
+  letter-spacing: .45px;
+  span {
+    font-weight: 300;
+    font-size: .6667rem;
+    color: $light-gray;
+    letter-spacing: .5px;
+  }
+}
+
+.phone {
+  color: $yellow;
+}
+
+.login button {
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+.login  a, .login span, .login button {
+  color: $white;
+  font-size: .87rem;
+  transition: $hover-transition;
+  border-bottom: 1px solid transparent;
+  &:hover {
+    @include hover-text-and-border ($yellow-hover, $hover-transition);
+  }
+}
+
+.current-language, .language-list-item {
+  text-transform: uppercase;
+  font-weight: 500;
+  color: $white;
+  text-align: center;
+  &:hover {
+    color: $white;
+  }
+}
+
+.language-list-item {
+  color: $header-language-selector-font-color;
+  &:hover {
+    color: $header-language-selector-font-color;
+  }
+}
+
+.top-nav-menu-item {
+  font-weight: 600;
+  font-size: 1rem;
+  color: $catalog-font-color;
+  transition: $hover-transition;
+}
+
+.nav-item {
+  padding: 0;
+  &:hover .top-nav-menu-item {
+    transition: $hover-transition;
+    color: $red-hover-color;
+  }
+}
+
+.sub-menu-item {
+  color: $catalog-font-color;
+  font-weight: 600;
+  white-space: nowrap;
+  &:hover {
+    color: $black;
+  }
+}
+
+.additional-guarantee {
+  text-decoration: none;
+  font-weight: 600;
+  color: $black;
+  font-size: .8667rem;
+  &:hover {
+    color: $white;
+  }
+}
+
+.logo-description {
+  letter-spacing: 0.6px;
+  font-weight: 300;
+  color: $light-gray;
+}
+
+.catalog-button-text {
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color: $catalog-font-color;
+  white-space: nowrap;
+  &:hover {
+    color: $catalog-font-color;
+  }
+}
+
+.catalog-menu-item-text, .catalog-sub-menu-item {
+  font-size: 1rem;
+  font-weight: 600;
+  color: $catalog-font-color;
+  &:hover {
+    color: $catalog-font-color;
+  }
+}
+
+.compare-bascket-text {
+  text-transform: uppercase;
+  font-size: .6rem;
+  font-weight: 600;
+  color: $header-language-selector-font-color;
+}
+
+.detailed-button {
+  color: $catalog-font-color;
+  font-size: 1rem;
+  font-weight: 500;
+  &:hover {
+    color: inherit;
+  }
+}
+
+.product-item-title, .product-item-title span, .catalog-product-item-title {
+  font-size: 1.1333rem;
+  font-weight: 500;
+  color: $black;
+}
+
+.hot {
+  text-transform: uppercase;
+  font-size: 0.8667rem;
+  line-height: 1;
+  letter-spacing: 0.65px;
+  color: $hot-text-color;
+  font-weight: 600;
+}
+
+.to-basket, .fast-buy {
+  line-height: 1;
+  text-align: center;
+  color: $catalog-font-color;
+  font-weight: 600;
+  font-size: 1rem;
+  margin: 0;
+  &:hover {
+    background-color: $yellow-hover;
+    color: inherit;
+  }
+}
+
+.to-basket-disable {
+  color: $white;
+}
+
+.price-text {
+  font-weight: 600;
+  font-size: 1.3333rem;
+  color: $black;
+}
+
+.main-description-title h1 {
+    font-size: 1.2rem;
+    color: $black;
+    font-weight: 600;
+}
+
+.paragraph-wrap p {
+    font-weight: 300;
+}
+
+.subscribe  p {
+    color: $footer-text-color;
+  font-weight: 500;
+}
+
+.subscribe-btn {
+  line-height: 1;
+  color: $catalog-font-color;
+  font-weight: 600;
+  &:hover {
+    color: $copyright-text-color;
+  }
+}
+
+.subscribe-input {
+  color: $catalog-font-color;
+  line-height: 1;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+form {
+  input {
+    transition: $hover-transition;
+    &::placeholder {
+      font-weight: 300;
+      text-align: center;
+      color: $email-placeholder-color;
+    }
+    &:focus {
+      transition: $hover-transition;
+      //border: transparent;
+      outline-color: $yellow-hover !important;
+      box-shadow: 0 0 5px $yellow-hover !important;
+    }
+  }
+}
+
+.footer-nav-menu {
+  color: $footer-text-color;
+  font-size: 1.3333rem;
+  line-height: 24px;
+  font-weight: 500;
+}
+
+.footer-nav-menu-item-link {
+  line-height: 1.5;
+  color: $social-icons-color;
+  font-size: 1rem;
+  &:hover {
+    color: $yellow;
+  }
+}
+
+.footer-nav-telephone {
+  color: $white;
+  font-size: 1.3333rem;
+  font-weight: 400;
+  transition: ease-in-out .2s;
+  &:hover {
+    transition: ease-in-out .2s;
+    color: $yellow;
+  }
+}
+
+.schedule-footer {
+  font-weight: 500;
+  font-size: 0.8667rem;
+  color: $schedule-text-footer-color;
+  line-height: 1.5;
+  span {
+    font-weight: 500;
+    color: $white;
+    margin-bottom: 10px;
+  }
+}
+
+.copyright-wrap {
+  font-size: 0.8667rem;
+  color: $copyright-text-color;
+  font-weight: 500;
+}
+
+.video-reviews-item-title {
+  color: $black;
+  font-size: 1.1333rem;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.search-input {
+  font-weight: 500;
+}

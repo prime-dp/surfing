@@ -1,0 +1,99 @@
+.modal-login-wrap {
+  opacity: 1;
+  z-index: 102;
+  max-width: 600px;
+  width: 94%;
+  background-color: $white;
+  padding: 30px;
+  margin: 50px 0;
+  .article-title-wrap-for-pseudo-100 {
+    padding: 0 !important;
+  }
+  .login-form {
+    .form-control {
+      margin: 20px 0;
+      height: 3rem;
+      border-radius: 0;
+      &::placeholder {
+        text-align: left;
+      }
+      &:focus {
+        border-color: $yellow-hover;
+      }
+    }
+  }
+
+  .close {
+    position: absolute;
+    z-index: 1;
+    right: 10px;
+    top: 6px;
+  }
+
+  .custom-checkbox {
+    margin: 10px 0;
+    position: relative;
+    line-height: 1;
+    padding-left: 24px;
+    user-select: none;
+    cursor: pointer;
+    .gui-form-checkbox {
+      height: 0;
+      width: 0;
+      visibility: hidden;
+      opacity: 0;
+    }
+    .checkmark {
+      line-height: 1;
+      &:before {
+        @include pseudo;
+        top: 50%;
+        left: 0;
+        width: 18px;
+        height: 18px;
+        border: $product-item-border;
+        transform: translateY(-50%);
+      }
+      &:after {
+        content: "";
+        position: absolute;
+        opacity: 0;
+        left: 7px;
+        top: 2px;
+        width: 5px;
+        height: 10px;
+        background-color: $white;
+        border: solid $catalog-icon-color;
+        border-width: 0 2px 2px 0;
+        -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        transform: rotate(45deg);
+        transition: $hover-transition;
+      }
+    }
+    .gui-form-checkbox:checked ~ .checkmark:after {
+      opacity: 1;
+      transition: $hover-transition;
+    }
+  }
+  .pass-recovery-wrapper {
+    text-align: right;
+    .btn-pass-recovery {
+      display: inline-block;
+      background: none;
+      border: none;
+      color: $red-hover-color;
+    }
+  }
+
+  .subscribe-btn {
+    margin-bottom: 0;
+  }
+}
+
+
+
+
+
+
+

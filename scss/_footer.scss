@@ -1,0 +1,121 @@
+.footer-wrap {
+  background-color: $footer-background-color;
+  padding: 50px 0 30px;
+  border-top: 1px solid $footer-border-color;
+  border-bottom: 1px solid $copyright-border-color;
+}
+
+
+.subscribe-wrap {
+  padding-right: 25px;
+  padding-top: 15px;
+}
+
+.subscribe-btn {
+  width: 100%;
+  background-color: $yellow;
+  border: 0;
+  transition: $hover-transition;
+  &:hover {
+    background-color: $yellow-hover;
+    transition: $hover-transition;
+  }
+}
+
+.subscribe-input {
+  width: 100%;
+  border: 0;
+}
+
+.subscribe-input-wrap, .login-input-wrap {
+  position: relative;
+  &:after {
+    position: absolute;
+    content: "Некорректный формат E-mail";
+    display: inline-block;
+    color: $white;
+    white-space: nowrap;
+    top: -40px;
+    left: 50%;
+    padding: 0 8px;
+    transform: translate(-50%, 0);
+    background-color: $not-in-stock-color;
+    border-radius: 8px;
+    opacity: 0;
+    font-weight: 600;
+    font-size: .8rem;
+    z-index: 1;
+  }
+}
+
+.invalid-mail, .empty-mail {
+  .subscribe-input-wrap, .login-input-wrap {
+    &:after {
+      top: -60px;
+      opacity: 1;
+      transition: $hover-transition;
+    }
+  }
+}
+
+.empty-mail {
+  .subscribe-input-wrap, .login-input-wrap {
+    &:after {
+    content: "Заполните поле"
+    }
+  }
+}
+
+.social-icon-footer {
+  color: $social-icons-color;
+  transition: $hover-transition;
+
+}
+
+.social-icon-footer-wrap {
+  display: flex;
+  border: 1px solid $social-icons-color;
+  justify-content: center;
+  align-items: center;
+  transition: $hover-transition;
+  &:hover {
+    border-color: $yellow;
+    transition: $hover-transition;
+    .social-icon-footer {
+      color: $yellow;
+      transition: $hover-transition;
+    }
+  }
+}
+
+.subscribe {
+  margin-right: auto;
+}
+
+.footer-nav-menu {
+  display: flex;
+  flex-direction: column;
+  li {
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
+.footer-nav-menu-item-link {
+  display: inline-block;
+  border-bottom: 1px solid transparent;
+  transition: ease-in-out .2s;
+  &:hover {
+    @include hover-text-and-border ($yellow-hover, $hover-transition);
+  }
+}
+
+.footer-nav-telephone {
+  margin-top: 10px;
+}
+
+.copyright-wrap {
+  background-color: $footer-background-color;
+  border-top: 1px solid $copyright-border-color-1;
+  padding: 20px 0 20px;
+}

@@ -1,0 +1,11 @@
+@mixin pseudo {
+  display: block;
+  position: absolute;
+  content: '';
+}
+
+@mixin hover-text-and-border ($yellow-hover, $hover-transition) {
+  color: $yellow-hover;
+  transition: $hover-transition;
+  border-bottom: 1px solid $yellow-hover;
+}
