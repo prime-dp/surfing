@@ -120,7 +120,7 @@
                 </form>
             </div>
         </div>
-        <div class="mobile-menu w-100 d-flex d-lg-none flex-column position-fixed">
+        <div class="mobile-menu w-100 d-flex d-lg-none flex-column position-fixed" id="mobile-menu-overlay">
             <div class="language-mobile-wrap d-flex justify-content-center">
                 <ul class="language-mobile pl-0 mb-0 d-inline-flex">
                     <li><a class="language-list-item active" href="">RU</a></li>

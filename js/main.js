@@ -10,6 +10,7 @@ $(document).ready(function () {
             $(this).toggleClass('open');
             $('.mobile-menu').toggleClass('open-menu');
             $('body').toggleClass('scroll-disable');
+            $(".search-mobile").slideUp (300);
         });
 
         $(".catalog-button-mobile-wrap").click(function () {
@@ -19,6 +20,53 @@ $(document).ready(function () {
         $(".icon-search").click(function () {
             $(".search-mobile").slideToggle (300);
         });
+
+        //ios menu scroll
+        var FenixUI = {
+            overlayModalIos : function($block) {
+                var _overlay = document.getElementById($block);
+                var _clientY = null; // remember Y position on touch start
+
+                if(!_overlay) {
+                    return '';
+                }
+
+                _overlay.addEventListener('touchstart', function(event) {
+                    if(event.targetTouches.length === 1) {
+                        // detect single touch
+                        _clientY = event.targetTouches[0].clientY;
+                    }
+                }, false);
+
+                _overlay.addEventListener('touchmove', function(event) {
+                    if(event.targetTouches.length === 1) {
+                        // detect single touch
+                        disableRubberBand(event);
+                    }
+                }, false);
+
+                function disableRubberBand(event) {
+                    var clientY = event.targetTouches[0].clientY - _clientY;
+
+                    if(_overlay.scrollTop === 0 && clientY > 0) {
+                        // element is at the top of its scroll
+                        event.preventDefault();
+                    }
+
+                    if(isOverlayTotallyScrolled() && clientY < 0) {
+                        //element is at the top of its scroll
+                        event.preventDefault();
+                    }
+                }
+
+                function isOverlayTotallyScrolled() {
+                    // https://developer.mozilla.org/en-US/docs/Web/API/Element/scrollHeight#Problems_and_solutions
+                    return _overlay.scrollHeight - _overlay.scrollTop <= _overlay.clientHeight;
+                }
+            }
+        };
+
+        FenixUI.overlayModalIos('mobile-menu-overlay');
     }
 });
 
@@ -38,6 +86,10 @@ $(document).ready(function($) {
             $(".header-wrap").slideDown(300);
         }
         g_top = top;
+
+        if (scrolled) {
+            $(".search-mobile").slideUp (300);
+        }
     });
 });
 

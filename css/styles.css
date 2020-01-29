@@ -762,7 +762,8 @@ section {
   line-height: 1; }
   .first-slider .owl-dots .owl-dot {
     background-color: transparent;
-    border: none; }
+    border: none;
+    padding: 1px 6px; }
     .first-slider .owl-dots .owl-dot span {
       display: block;
       border-radius: 50%; }
